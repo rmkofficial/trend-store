@@ -1,11 +1,12 @@
 import "./Cart.css";
 import CartItem from "./CartItem";
 import products from "../../productData";
+import Offcanvas from "../UI/Offcanvas";
 
 const Cart = ({ onClose }) => {
   return (
-    <div className="offcanvas">
-      <div className="content">
+    <>
+      <Offcanvas onClose={onClose}>
         <div className="cart-head">
           <h2>Sepetim</h2>
           <a href="/" className="cart-close" onClick={onClose}>
@@ -23,8 +24,8 @@ const Cart = ({ onClose }) => {
           <button className="cart-order">Siparis Ver</button>
           <button className="cart-clear">Temizle</button>
         </div>
-      </div>
-    </div>
+      </Offcanvas>
+    </>
   );
 };
 
